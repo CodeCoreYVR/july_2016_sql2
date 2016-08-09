@@ -1,0 +1,14 @@
+brew install postgresql
+
+mkdir -p ~/Library/LaunchAgents
+ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+
+gem install rails
+
+bin/rails -v <- pull up the version of rails you've installed
+bin/rails new demo <- create a rails demo project
+bin/rails c <- run the rails console
+bin/rails s <- run the rails server
+
+http://localhost:3000/
